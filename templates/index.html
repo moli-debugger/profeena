@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>certification</title>
+    <link rel="stylesheet" href=" {{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+<div class="container container-padding50">
+    <form >
+    <input type="text" name="id" class="js-userinput container-textinput" />
+        <button formaction="/view" class="js-go container-button">Go!</button></form>
+</div>
+<div style="alignment: center" class="container container-padding50 js-container">
+    <div>
+        <object
+                data={{ Url|safe }}
+                type="application/pdf"
+                width="500"
+                height="678"
+        >
+
+            <iframe
+                    src={{ Url|safe }}
+                    width="500"
+                    height="678"
+            >
+                <p>This browser does not support PDF!</p>
+            </iframe>
+
+        </object>
+    </div>
+
+</div>
+
+</body>
+</html>
